@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0804fe55-249c-4651-b309-aa407b8b5cbf" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Task1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Main.java" afterDir="false" />
+=======
+    <list default="true" id="c2944d5f-f239-4a0c-99ac-6e44d83e4bd0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task1/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task1/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task1/HostelLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/HostelLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task1/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Room.java" afterDir="false" />
+>>>>>>> 3fa46c9e352bbf71b43bb676945c408e9ad88db0
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +33,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UGDfxE2KA84l7QTivoWRLk1V0I" />
+<<<<<<< HEAD
+=======
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 3fa46c9e352bbf71b43bb676945c408e9ad88db0
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
@@ -66,6 +79,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574978765287</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2944d5f-f239-4a0c-99ac-6e44d83e4bd0" name="Default Changelist" comment="" />
+      <created>1574974144347</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574974144347</updated>
     </task>
     <servers />
   </component>

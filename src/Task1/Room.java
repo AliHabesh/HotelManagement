@@ -6,6 +6,7 @@ public class Room {
     private boolean balcony;
     private double pricePerNight;
     private boolean bookingStatus;
+    private Customer customer;
 
     @Override
     public String toString() {
@@ -25,4 +26,48 @@ public class Room {
         this.pricePerNight = pricePerNight;
         this.bookingStatus = bookingStatus;
     }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public int getNumberOfBeds() {
+        return numberOfBeds;
+    }
+
+    public void setNumberOfBeds(int numberOfBeds) {
+        this.numberOfBeds = numberOfBeds;
+    }
+
+    public boolean isBalcony() {
+        return balcony;
+    }
+
+    public void setBalcony(boolean balcony) {
+        this.balcony = balcony;
+    }
+
+    public double getPricePerNight() {
+        return pricePerNight;
+    }
+
+    public void setPricePerNight(double pricePerNight) {
+        this.pricePerNight = pricePerNight;
+    }
+
+    public boolean isBookingStatus() {
+        return bookingStatus;
+    }
+
+    public void setBookingStatus(boolean bookingStatus) {
+            this.bookingStatus = bookingStatus;
+
+    }
+
+
+
 }
