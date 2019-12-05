@@ -6,6 +6,7 @@ public class Room {
     private boolean balcony;
     private double pricePerNight;
     private boolean bookingStatus;
+    private Customer customer;
 
     @Override
     public String toString() {
@@ -66,6 +67,7 @@ public class Room {
             this.bookingStatus = bookingStatus;
 
     }
+
 
 
 }
