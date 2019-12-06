@@ -1,4 +1,4 @@
-package Task1;
+package HotelManagementApplication;
 
 import java.util.ArrayList;
 
