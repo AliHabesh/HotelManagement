@@ -67,6 +67,9 @@ public class Room {
             this.bookingStatus = bookingStatus;
 
     }
+    public void addCustomer(Customer customer, Room room) {
+        room.customer = customer;
+    }
 
 
 
