@@ -29,9 +29,6 @@ public class HostelLogic {
          }
          return availableRooms;
      }
-     public boolean addRoom(Room room) {
-        return rooms.add(room);
-     }
 
     public Customer getCustomer(String ssn) {
         for (int i = 0; i < customers.size(); i++) {
@@ -43,7 +40,10 @@ public class HostelLogic {
         }
         return null;
     }
-    
+    public boolean addRoom(Room room) {
+        return rooms.add(room);
+    }
+
 
 
 
