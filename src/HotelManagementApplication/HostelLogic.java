@@ -1,6 +1,5 @@
-package Task1;
+package HotelManagementApplication;
 
-import java.nio.channels.ScatteringByteChannel;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -31,10 +30,12 @@ public class HostelLogic {
          }
          return availableRooms;
      }
+
      public void addRoom() {
          System.out.println("Enter a room Number: ");
          int roomnbr = input.nextInt();
      }
+
 
     public Customer getCustomer() {
         String ssn;
@@ -48,13 +49,20 @@ public class HostelLogic {
         return null;
     }
 
-    public void editBooking(String ssn, Booking booking) {
+
+    public boolean editBooking(String ssn, Booking booking) {
         if(booking.getCustomerSnn()==null){
             booking.setCustomerSnn(ssn);
             return true;
         }
         return false;
     }
+
+    public boolean addRoom(Room room) {
+        return rooms.add(room);
+    }
+
+
 
 
 

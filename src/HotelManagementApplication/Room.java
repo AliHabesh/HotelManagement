@@ -1,4 +1,4 @@
-package Task1;
+package HotelManagementApplication;
 
 public class Room {
     private int roomNumber;

@@ -1,4 +1,4 @@
-package Task1;
+package HotelManagementApplication;
 
 import com.sun.source.tree.AssignmentTree;
 
