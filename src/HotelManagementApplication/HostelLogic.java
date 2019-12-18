@@ -31,8 +31,11 @@ public class HostelLogic {
          return availableRooms;
      }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6f3323b6471c0cf40c121571bb1c65d5aee6df3b
     public Customer getCustomer() {
         String ssn;
         System.out.println("Input Customer ssn");
@@ -54,8 +57,27 @@ public class HostelLogic {
         return false;
     }
 
-    public boolean addRoom(Room room) {
-        return rooms.add(room);
+    public void addRoom() {
+
+        int x = 1;
+        do {
+            try {
+                System.out.println("Enter the desired number of the new room: ");
+                int roomNumber = input.nextInt();
+                System.out.println("Enter number of beds: ");
+                int numberOfBeds = input.nextInt();
+                System.out.println("Will the room have balcony? y/n");
+                boolean balcony = input.nextBoolean();
+                System.out.println("What is the price per night?");
+                double pricePerNight = input.nextDouble();
+                System.out.println("will the room be available or not?");
+                boolean reply = input.nextBoolean();
+                rooms.add(new Room(roomNumber, numberOfBeds, balcony, pricePerNight, reply));
+                x = 2;
+            } catch (Exception e) {
+                System.out.println("There was an error, please keep in mind to input the correct format!");
+            }
+        }while (x == 1);
     }
 
 
