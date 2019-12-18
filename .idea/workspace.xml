@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2944d5f-f239-4a0c-99ac-6e44d83e4bd0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task1/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task1/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task1/HostelLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/HostelLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task1/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/HostelLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/HostelLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/HotelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/HotelMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +42,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HotelManagementApplication.Main" />
+      <module name="Project_Course_2019_Group-12-" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HotelManagementApplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Task1.Main" />
       <module name="Project_Course_2019_Group-12-" />
@@ -52,6 +66,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />

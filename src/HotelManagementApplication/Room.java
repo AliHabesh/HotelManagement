@@ -1,4 +1,4 @@
-package Task1;
+package HotelManagementApplication;
 
 public class Room {
     private int roomNumber;
@@ -66,6 +66,9 @@ public class Room {
     public void setBookingStatus(boolean bookingStatus) {
             this.bookingStatus = bookingStatus;
 
+    }
+    public void addCustomer(Customer customer, Room room) {
+        room.customer = customer;
     }
 
 
