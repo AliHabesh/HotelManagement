@@ -32,8 +32,7 @@ public class HostelLogic {
      }
 
      public void addRoom() {
-         System.out.println("Enter a room Number: ");
-         int roomnbr = input.nextInt();
+
      }
 
 

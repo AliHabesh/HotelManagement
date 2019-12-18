@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c2944d5f-f239-4a0c-99ac-6e44d83e4bd0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/Task1/HostelLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/HostelLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Task1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Task1/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task1/Room.java" afterDir="false" />
+=======
+>>>>>>> Reading
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
