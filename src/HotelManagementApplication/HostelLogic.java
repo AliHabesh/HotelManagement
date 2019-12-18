@@ -31,9 +31,6 @@ public class HostelLogic {
          return availableRooms;
      }
 
-     public void addRoom() {
-
-     }
 
 
     public Customer getCustomer() {
