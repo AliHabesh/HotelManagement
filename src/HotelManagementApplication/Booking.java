@@ -8,14 +8,18 @@ public class Booking {
     private Date checkInDate;
     private Date checkOutDate;
     private double totalPrice;
-    private ArrayList<Room> room;
     private String customerSnn;
+    private Customer customer;
+    private Room room;
 
-    public Booking(int bookingId, Date checkOutDate, double totalPrice, ArrayList<Room> room) { // continue this once HotelLogic class is done
+
+
+    public Booking(int bookingId, Date checkInDate, Customer customer, Room room) { // continue this once HotelLogic class is done
         this.bookingId = bookingId;
-        this.checkOutDate = checkOutDate;
+        this.checkOutDate = checkInDate;
         this.totalPrice = totalPrice;
         this.room = room;
+        this.customer = customer;
     }
 
 
@@ -51,13 +55,6 @@ public class Booking {
         this.totalPrice = totalPrice;
     }
 
-    public ArrayList<Room> getRoom() {
-        return room;
-    }
-
-    public void setRoom(ArrayList<Room> room) {
-        this.room = room;
-    }
 
     public String getCustomerSnn() {
         return customerSnn;
