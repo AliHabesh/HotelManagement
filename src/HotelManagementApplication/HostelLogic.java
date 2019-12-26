@@ -21,9 +21,9 @@ public class HostelLogic {
     }
 
     public ArrayList<Room> getRooms() {
-        rooms.add(new Room(1, 2,true, 20,true));
-        rooms.add(new Room(2, 1,true, 15,true));
-        rooms.add(new Room(3, 4,true, 30,true));
+        rooms.add(new Room(1, 2,true, 20,false));
+        rooms.add(new Room(2, 1,true, 15,false));
+        rooms.add(new Room(3, 4,true, 30,false));
         rooms.add(new Room(4, 3,true, 25,true));
         rooms.add(new Room(5, 2,true, 20,true));
         return rooms;
@@ -32,7 +32,7 @@ public class HostelLogic {
      public ArrayList<Room> getAvailableRooms() {
         ArrayList availableRooms = new ArrayList<>();
          for (int i = 0; i < rooms.size(); i++) {
-             if (rooms.get(i).isBookingStatus()== true){
+             if (rooms.get(i).isBookingStatus() == true){
                  availableRooms.add(i);
              }
          }
@@ -45,7 +45,7 @@ public class HostelLogic {
         System.out.println("Input Customer ssn");
         ssn = input.nextLine();
         for (Customer customer : customers) {
-                if (customer.getSsn() == ssn) {
+                if (customer.getSsn().equals(ssn)) {
                     return customer;
                 }
             }

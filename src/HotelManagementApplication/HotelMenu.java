@@ -12,16 +12,16 @@ public class HotelMenu {
         int x = 1;
         while (x == 1) {
             System.out.println("-----------------Menu------------");
-            System.out.println("1. add customer");
-            System.out.println("2. Show all customers");
-            System.out.println("3. Show specific customer");
-            System.out.println("4. get all available rooms ");
-            System.out.println("5. Add rooms");
-            System.out.println("6. Show all rooms");
-            System.out.println("7. Add a booking");
-            System.out.println("8. Edit booking");
-            System.out.println("9. Show all bookings");
-            System.out.println("10. Exit");
+            System.out.println("1. add customer"); // done
+            System.out.println("2. Show all customers"); // done
+            System.out.println("3. Show specific customer"); // done
+            System.out.println("4. get all available rooms "); // done
+            System.out.println("5. Add rooms"); // done
+            System.out.println("6. Show all rooms"); // done
+            System.out.println("7. Add a booking"); // done
+            System.out.println("8. Edit booking"); // Not done
+            System.out.println("9. Show all bookings"); // Done
+            System.out.println("10. Exit"); // done
             int choice = input.nextInt();
             switch (choice) {
                 case 1:
@@ -34,7 +34,7 @@ public class HotelMenu {
                     System.out.println(myApp.getCustomer());
                     break;
                 case 4:
-                    System.out.println(myApp.getAvailableRooms());
+                    myApp.getAvailableRooms();
                     break;
                 case 5:
                     myApp.addRoom();
@@ -47,7 +47,7 @@ public class HotelMenu {
                     myApp.createBooking();
                     break;
                 case 9:
-                    System.out.println(myApp.showBookings()+"\n");
+                    System.out.println(myApp.showBookings());
                     break;
                 case 10:
                     x = 2;
