@@ -10,13 +10,13 @@ public class Room {
 
     @Override
     public String toString() {
-        return "Room{" +
-                "roomNumber=" + roomNumber +
-                ", numberOfBeds=" + numberOfBeds +
-                ", balcony=" + balcony +
-                ", pricePerNight=" + pricePerNight +
-                ", bookingStatus=" + bookingStatus +
-                '}';
+        return ( "Room "+
+                "\nroomNumber=" + roomNumber +
+                "\n numberOfBeds=" + numberOfBeds +
+                "\n balcony=" + balcony +
+                "\n pricePerNight=" + pricePerNight +
+                "\n bookingStatus=" + bookingStatus
+                );
     }
 
     public Room(int roomNumber, int numberOfBeds, boolean balcony, double pricePerNight, boolean bookingStatus) {

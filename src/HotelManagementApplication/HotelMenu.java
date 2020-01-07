@@ -22,6 +22,8 @@ public class HotelMenu {
             System.out.println("8. Edit booking");
             System.out.println("9. Show all bookings");
             System.out.println("10. Exit");
+            System.out.println("11. Remove customer");
+            System.out.println("12. Remove room");
             int choice = input.nextInt();
             switch (choice) {
                 case 1:
@@ -51,6 +53,12 @@ public class HotelMenu {
                     break;
                 case 10:
                     x = 2;
+                    break;
+                case 11:
+                    myApp.removeCustomer();
+                    break;
+                case 12:
+                    myApp.removeRooms();
                     break;
 
 

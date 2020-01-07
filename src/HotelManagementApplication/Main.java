@@ -11,6 +11,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
         HotelMenu myApp = new HotelMenu();
         myApp.MenuApp();
+
     }
-    }
+
+}
 

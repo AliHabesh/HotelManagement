@@ -87,6 +87,39 @@ public class HostelLogic {
         return null;
     }
 
+    public void removeCustomer(){
+        int x = 1;
+        do {
+            try {
+                System.out.println("Enter a number you wish to remove: ");
+                int num =  input.nextInt();
+                customers.remove(num);
+                x=2;
+            } catch (Exception e){
+                System.out.println("Please enter a valid number"+ e.getMessage());
+            }
+
+        }while (x ==1);
+
+
+    }
+
+    public void removeRooms() {
+        int x = 1;
+        do {
+            try {
+                System.out.println("!To exit press 3");
+                System.out.println("Enter a number you wish to remove: ");
+                int num = input.nextInt();
+                rooms.remove(num);
+                x = 2;
+                x = 3;
+            } catch (Exception e) {
+                System.out.println("Please enter a valid number !" + e.getMessage());
+            }
+        } while (x == 1);
+
+    }
     public void addRoom() {
 
         int x = 1;
