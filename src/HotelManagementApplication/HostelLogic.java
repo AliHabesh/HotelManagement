@@ -32,7 +32,7 @@ public class HostelLogic {
      public ArrayList<Room> getAvailableRooms() {
         ArrayList availableRooms = new ArrayList<>();
          for (int i = 0; i < rooms.size(); i++) {
-             if (rooms.get(i).isBookingStatus() == true){
+             if (rooms.get(i).isBookingStatus()){
                  availableRooms.add(i);
              }
          }
