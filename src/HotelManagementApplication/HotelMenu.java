@@ -36,7 +36,7 @@ public class HotelMenu {
                     System.out.println(myApp.getCustomer());
                     break;
                 case 4:
-                    System.out.println(myApp.getAvailableRooms());
+                    myApp.getAvailableRooms();
                     break;
                 case 5:
                     myApp.addRoom();
@@ -49,7 +49,7 @@ public class HotelMenu {
                     myApp.createBooking();
                     break;
                 case 9:
-                    System.out.println(myApp.showBookings()+"\n");
+                    System.out.println(myApp.showBookings());
                     break;
                 case 10:
                     x = 2;
