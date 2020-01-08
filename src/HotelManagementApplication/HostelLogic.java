@@ -61,8 +61,8 @@ public class HostelLogic {
         System.out.println("----------------Edit----------------");
         System.out.println("1. Edit Customer social security number: ");
         System.out.println("2. Edit Customer Room number: ");
-        System.out.println("3. Edit customer id");
-        System.out.println("4. Edit customer Date   ");
+        System.out.println("3. Edit customer id: ");
+        System.out.println("4. Edit customer Date: ");
 
         if(booking.getCustomerSnn()==null){
             booking.setCustomerSnn(ssn);
