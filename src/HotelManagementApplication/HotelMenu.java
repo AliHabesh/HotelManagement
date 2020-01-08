@@ -12,16 +12,18 @@ public class HotelMenu {
         int x = 1;
         while (x == 1) {
             System.out.println("-----------------Menu------------");
-            System.out.println("1. add customer"); // done
-            System.out.println("2. Show all customers"); // done
-            System.out.println("3. Show specific customer"); // done
-            System.out.println("4. get all available rooms "); // done
-            System.out.println("5. Add rooms"); // done
-            System.out.println("6. Show all rooms"); // done
-            System.out.println("7. Add a booking"); // done
-            System.out.println("8. Edit booking"); // Not done
-            System.out.println("9. Show all bookings"); // Done
-            System.out.println("10. Exit"); // done
+            System.out.println("1. add customer");
+            System.out.println("2. Show all customers");
+            System.out.println("3. Show specific customer");
+            System.out.println("4. get all available rooms ");
+            System.out.println("5. Add rooms");
+            System.out.println("6. Show all rooms");
+            System.out.println("7. Add a booking");
+            System.out.println("8. Edit booking");
+            System.out.println("9. Show all bookings");
+            System.out.println("10. Exit");
+            System.out.println("11. Remove customer");
+            System.out.println("12. Remove room");
             int choice = input.nextInt();
             switch (choice) {
                 case 1:
@@ -51,6 +53,12 @@ public class HotelMenu {
                     break;
                 case 10:
                     x = 2;
+                    break;
+                case 11:
+                    myApp.removeCustomer();
+                    break;
+                case 12:
+                    myApp.removeRooms();
                     break;
 
 
