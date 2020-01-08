@@ -8,7 +8,13 @@ import java.util.Scanner;
 
 public class HostelLogic {
     static Scanner input = new Scanner(System.in);
-  static  ArrayList<Room> rooms = new ArrayList<>();
+  static  ArrayList<Room> rooms = new ArrayList<>() {{
+      add(new Room(1, 2, true, 20, false));
+      add(new Room(2, 1, true, 15, false));
+      add(new Room(3, 4, true, 30, true));
+      add(new Room(4, 3, true, 25, true));
+      add(new Room(5, 2, true, 20, true));
+  }};
   static ArrayList<Customer> customers = new ArrayList<>();
   static ArrayList<Booking> bookings = new ArrayList<>();
 
@@ -21,11 +27,6 @@ public class HostelLogic {
     }
 
     public ArrayList<Room> getRooms() {
-        rooms.add(new Room(1, 2,true, 20,false));
-        rooms.add(new Room(2, 1,true, 15,false));
-        rooms.add(new Room(3, 4,true, 30,false));
-        rooms.add(new Room(4, 3,true, 25,true));
-        rooms.add(new Room(5, 2,true, 20,true));
         return rooms;
      }
 
@@ -56,19 +57,50 @@ public class HostelLogic {
     }
 
 
-    public boolean editBooking(Booking booking) {
-        String ssn = "";
+    public void editBooking(int bookingID) throws ParseException {
+
+        Booking currentBooking = new Booking();
+        for (Booking booking1: bookings) {
+            if (booking1.getBookingId() == bookingID) {
+                currentBooking = booking1;
+            }else{
+                System.out.println("No booking found with this booking id!");
+            }
+        }
+        Scanner input = new Scanner(System.in);
         System.out.println("----------------Edit----------------");
         System.out.println("1. Edit Customer social security number: ");
         System.out.println("2. Edit Customer Room number: ");
-        System.out.println("3. Edit customer id: ");
-        System.out.println("4. Edit customer Date: ");
+        System.out.println("3. Edit customer id");
+        System.out.println("4. Edit customer checkout Date: ");
+        int choice = input.nextInt();
 
-        if(booking.getCustomerSnn()==null){
-            booking.setCustomerSnn(ssn);
-            return true;
+
+        switch(choice) {
+            case 1:
+                System.out.println("Enter the new ssn: ");
+                String newssn = input.nextLine();
+                currentBooking.setCustomerSnn(newssn);
+                break;
+            case 2:
+                System.out.println("Enter the new room number: ");
+                int roomNumber = input.nextInt();
+                currentBooking.room.setRoomNumber(roomNumber);
+                break;
+            case 3:
+                System.out.println("Edit customer id");
+                int bookingId = input.nextInt();
+                currentBooking.setBookingId(bookingId);
+            case 4:
+                System.out.println("Edit customer checkout Date, please enter the Date format in dd/mm/yyyy! ");
+                String checkOutDate = input.nextLine();
+                Date UserInputDate3 = new SimpleDateFormat("dd/mm/yyyy").parse(checkOutDate);
+                currentBooking.setCheckOutDate(UserInputDate3);
+                break;
+            default:
+                System.out.println("Error!");
+
         }
-        return false;
     }
 
 
@@ -191,6 +223,51 @@ public class HostelLogic {
             System.out.println("There was an error, please remember to input in the right format , Error was : "+e.getMessage());
         }
 
+    }
+
+    public void addCustomer2() {                            // All the methods from here and below will be for customer Management.
+        // The method names will always end with "2".
+        int x = 1;
+        do {
+            try {
+                System.out.println("Enter your Social Security Number: ");
+                String ssn = input.nextLine();
+                System.out.println("Enter your name: ");
+                String name = input.nextLine();
+                System.out.println("Enter your address: ");
+                String address = input.nextLine();
+                System.out.println("Enter your number: ");
+                String phoneNumber = input.nextLine();
+                customers.add(new Customer(ssn, name, address, phoneNumber));
+                x = 2;
+            } catch (Exception e) {
+                System.out.println("There was an error, please keep in mind that you have to input with the correct format!");
+            }
+        } while (x == 1);
+    }
+    public void createBooking2() throws ParseException { // New, update this to the class
+        try {
+            System.out.println("Enter your name");
+            String customerName = input.nextLine();
+            input.nextLine();
+            System.out.println("Enter the desired room number: ");
+            int roomNumber = input.nextInt();
+            input.nextLine();
+            System.out.println("Enter the check in Date in dd/mm/yyyy format");
+            String CheckInDate = input.nextLine();
+            Date UserInputDate = new SimpleDateFormat("dd/mm/yyyy").parse(CheckInDate);
+            System.out.println("Enter the checkout Date in dd/mm/yyyy format");
+            String checkOutDate = input.nextLine();
+            Date UserInputDate2 = new SimpleDateFormat("dd/mm/yyyy").parse(CheckInDate);
+            Room room = findRoom(roomNumber);
+            Customer customer = findCustomer(customerName);
+            if (rooms.contains(room) && customers.contains(customerName)) {
+
+                bookings.add(new Booking(UserInputDate, UserInputDate2, customer, room));
+            }
+        } catch (Exception e) {
+            System.out.println("There was an error, please remember to input in the right format , Error was : " + e.getMessage());
+        }
     }
 
 

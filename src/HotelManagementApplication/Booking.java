@@ -10,7 +10,7 @@ public class Booking {
     private double totalPrice;
     private String customerSnn;
     private Customer customer;
-    private Room room;
+    Room room;
 
 
 
@@ -20,6 +20,16 @@ public class Booking {
         this.totalPrice = totalPrice;
         this.room = room;
         this.customer = customer;
+    }
+
+    public Booking(Date checkInDate, Date checkOutDate, Customer customer, Room room) { // Customer Management, create booking.
+        this.customer = customer;
+        this.checkInDate = checkInDate;
+        this.room = room;
+        this.checkOutDate = checkOutDate;
+    }
+    public Booking() {
+
     }
 
 
