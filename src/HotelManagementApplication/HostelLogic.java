@@ -37,6 +37,7 @@ public class HostelLogic {
                  availableRooms.add(i);
              }
          }
+
          return availableRooms;
      }
 
@@ -50,6 +51,7 @@ public class HostelLogic {
                     return customer;
                 }
             }
+
         return null;
     }
     public ArrayList<Customer> getCustomers() {
@@ -81,16 +83,20 @@ public class HostelLogic {
                 System.out.println("Enter the new ssn: ");
                 String newssn = input.nextLine();
                 currentBooking.setCustomerSnn(newssn);
+
                 break;
             case 2:
                 System.out.println("Enter the new room number: ");
                 int roomNumber = input.nextInt();
                 currentBooking.room.setRoomNumber(roomNumber);
+
                 break;
             case 3:
                 System.out.println("Edit customer id");
                 int bookingId = input.nextInt();
                 currentBooking.setBookingId(bookingId);
+
+                break;
             case 4:
                 System.out.println("Edit customer checkout Date, please enter the Date format in dd/mm/yyyy! ");
                 String checkOutDate = input.nextLine();
@@ -105,16 +111,19 @@ public class HostelLogic {
 
 
     public Room findRoom(int roomNumber) {
-        int index;
-        if((index = rooms.indexOf(roomNumber)) > 0)
-            return rooms.get(index);
+        for (Room room: rooms) {
+        if (room.getRoomNumber()==roomNumber){
+            return room; }
+        }
+
         return null;
     }
 
     public Customer findCustomer(String customerName) {
-        int index;
-        if ((index = customers.indexOf(customerName)) > 0) {
-            return customers.get(index);
+        for (Customer customer: customers){
+            if (customer.getName().equals(customerName)){
+                return customer;
+            }
         }
         return null;
     }
@@ -126,7 +135,10 @@ public class HostelLogic {
                 System.out.println("Enter a number you wish to remove: ");
                 int num =  input.nextInt();
                 customers.remove(num);
-                x=2;
+                {
+
+                    x=2;
+                }
             } catch (Exception e){
                 System.out.println("Please enter a valid number"+ e.getMessage());
             }
@@ -267,6 +279,48 @@ public class HostelLogic {
             }
         } catch (Exception e) {
             System.out.println("There was an error, please remember to input in the right format , Error was : " + e.getMessage());
+        }
+    }
+    public void editBookingCustomer(int bookingID) throws ParseException {
+
+        Booking currentBooking = new Booking();
+        for (Booking booking1: bookings) {
+            if (booking1.getBookingId() == bookingID) {
+                currentBooking = booking1;
+            }else{
+                System.out.println("No booking found with this booking id!");
+            }
+        }
+        Scanner input = new Scanner(System.in);
+        System.out.println("----------------Edit----------------");
+        System.out.println("1. Edit Customer social security number: ");
+        System.out.println("2. Edit Customer Room number: ");
+        System.out.println("3. Edit customer checkout Date: ");
+        int choice = input.nextInt();
+
+
+        switch(choice) {
+            case 1:
+                System.out.println("Enter the new ssn: ");
+                String newssn = input.nextLine();
+                currentBooking.setCustomerSnn(newssn);
+
+                break;
+            case 2:
+                System.out.println("Enter the new room number: ");
+                int roomNumber = input.nextInt();
+                currentBooking.room.setRoomNumber(roomNumber);
+
+                break;
+            case 3:
+                System.out.println("Edit customer checkout Date, please enter the Date format in dd/mm/yyyy! ");
+                String checkOutDate = input.nextLine();
+                Date UserInputDate3 = new SimpleDateFormat("dd/mm/yyyy").parse(checkOutDate);
+                currentBooking.setCheckOutDate(UserInputDate3);
+                break;
+            default:
+                System.out.println("Error!");
+
         }
     }
 
