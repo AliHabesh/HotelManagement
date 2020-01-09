@@ -44,7 +44,6 @@ public class HotelMenu {
                 case 6:
                     System.out.println(myApp.getRooms()+"\n");
                     break;
-
                 case 7:
                     myApp.createBooking();
                     break;
