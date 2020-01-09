@@ -57,7 +57,7 @@ public class HotelMenu {
                 case 11:
                     myApp.removeRooms();
                     break;
-                case 12: 
+                case 12:
                     x = 2;
                     break;
 
