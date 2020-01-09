@@ -37,6 +37,7 @@ public class HostelLogic {
                  availableRooms.add(i);
              }
          }
+         waitForKeyEnter();
          return availableRooms;
      }
 
@@ -50,6 +51,7 @@ public class HostelLogic {
                     return customer;
                 }
             }
+        waitForKeyEnter();
         return null;
     }
     public ArrayList<Customer> getCustomers() {
@@ -81,21 +83,26 @@ public class HostelLogic {
                 System.out.println("Enter the new ssn: ");
                 String newssn = input.nextLine();
                 currentBooking.setCustomerSnn(newssn);
+                waitForKeyEnter();
                 break;
             case 2:
                 System.out.println("Enter the new room number: ");
                 int roomNumber = input.nextInt();
                 currentBooking.room.setRoomNumber(roomNumber);
+                waitForKeyEnter();
                 break;
             case 3:
                 System.out.println("Edit customer id");
                 int bookingId = input.nextInt();
                 currentBooking.setBookingId(bookingId);
+                waitForKeyEnter();
+                break;
             case 4:
                 System.out.println("Edit customer checkout Date, please enter the Date format in dd/mm/yyyy! ");
                 String checkOutDate = input.nextLine();
                 Date UserInputDate3 = new SimpleDateFormat("dd/mm/yyyy").parse(checkOutDate);
                 currentBooking.setCheckOutDate(UserInputDate3);
+                waitForKeyEnter();
                 break;
             default:
                 System.out.println("Error!");
@@ -105,17 +112,21 @@ public class HostelLogic {
 
 
     public Room findRoom(int roomNumber) {
-        int index;
-        if((index = rooms.indexOf(roomNumber)) > 0)
-            return rooms.get(index);
+        for (Room room: rooms) {
+        if (room.getRoomNumber()==roomNumber){
+            return room; }
+        }
+        waitForKeyEnter();
         return null;
     }
 
     public Customer findCustomer(String customerName) {
-        int index;
-        if ((index = customers.indexOf(customerName)) > 0) {
-            return customers.get(index);
+        for (Customer customer: customers){
+            if (customer.getName().equals(customerName)){
+                return customer;
+            }
         }
+        waitForKeyEnter();
         return null;
     }
 
@@ -126,7 +137,10 @@ public class HostelLogic {
                 System.out.println("Enter a number you wish to remove: ");
                 int num =  input.nextInt();
                 customers.remove(num);
-                x=2;
+                {
+                    waitForKeyEnter();
+                    x=2;
+                }
             } catch (Exception e){
                 System.out.println("Please enter a valid number"+ e.getMessage());
             }
@@ -273,7 +287,15 @@ public class HostelLogic {
 
 
 
-
+    private void waitForKeyEnter() {
+        System.out.print("Press enter key to continue...");
+        input.nextLine();
+    }
+    private void invalidChoice() {
+        System.out.println("\nInvalid Choice!");
+        System.out.print("Press enter key to continue...");
+        input.nextLine();
+    }
 
 
 

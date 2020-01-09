@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c2944d5f-f239-4a0c-99ac-6e44d83e4bd0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/HotelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/HotelMenu.java" afterDir="false" />
+=======
+>>>>>>> c3c0c5ab8d4f8050d9bad4dc13dbbfac3d6f1017
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +28,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitCode/Project_Course_2019_Group-12-" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documents/GitCode/Project_Course_2019_Group-12-" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
