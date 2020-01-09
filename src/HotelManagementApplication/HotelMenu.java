@@ -47,6 +47,10 @@ public class HotelMenu {
                 case 7:
                     myApp.createBooking();
                     break;
+                case 8:
+                    System.out.println("Enter booking ID: ");
+                    int bookingIID = input.nextInt();
+                    myApp.editBooking(bookingIID);
                 case 9:
                     System.out.println(myApp.showBookings());
                     break;
@@ -87,7 +91,9 @@ public class HotelMenu {
                     myApp.addCustomer2();
                     break;
                 case 2:
-
+                    System.out.println("Enter booking id: ");
+                    int bookingID = input.nextInt();
+                    myApp.editBooking(bookingID);
                     break;
                 case 3:
                     myApp.getAvailableRooms();

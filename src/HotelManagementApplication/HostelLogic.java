@@ -37,7 +37,6 @@ public class HostelLogic {
                  availableRooms.add(i);
              }
          }
-         waitForKeyEnter();
          return availableRooms;
      }
 
@@ -51,7 +50,7 @@ public class HostelLogic {
                     return customer;
                 }
             }
-        waitForKeyEnter();
+
         return null;
     }
     public ArrayList<Customer> getCustomers() {
@@ -83,26 +82,25 @@ public class HostelLogic {
                 System.out.println("Enter the new ssn: ");
                 String newssn = input.nextLine();
                 currentBooking.setCustomerSnn(newssn);
-                waitForKeyEnter();
+
                 break;
             case 2:
                 System.out.println("Enter the new room number: ");
                 int roomNumber = input.nextInt();
                 currentBooking.room.setRoomNumber(roomNumber);
-                waitForKeyEnter();
                 break;
             case 3:
                 System.out.println("Edit customer id");
                 int bookingId = input.nextInt();
                 currentBooking.setBookingId(bookingId);
-                waitForKeyEnter();
+
                 break;
             case 4:
                 System.out.println("Edit customer checkout Date, please enter the Date format in dd/mm/yyyy! ");
                 String checkOutDate = input.nextLine();
                 Date UserInputDate3 = new SimpleDateFormat("dd/mm/yyyy").parse(checkOutDate);
                 currentBooking.setCheckOutDate(UserInputDate3);
-                waitForKeyEnter();
+
                 break;
             default:
                 System.out.println("Error!");
@@ -116,7 +114,7 @@ public class HostelLogic {
         if (room.getRoomNumber()==roomNumber){
             return room; }
         }
-        waitForKeyEnter();
+
         return null;
     }
 
@@ -126,7 +124,6 @@ public class HostelLogic {
                 return customer;
             }
         }
-        waitForKeyEnter();
         return null;
     }
 
@@ -138,7 +135,6 @@ public class HostelLogic {
                 int num =  input.nextInt();
                 customers.remove(num);
                 {
-                    waitForKeyEnter();
                     x=2;
                 }
             } catch (Exception e){
@@ -287,15 +283,6 @@ public class HostelLogic {
 
 
 
-    private void waitForKeyEnter() {
-        System.out.print("Press enter key to continue...");
-        input.nextLine();
-    }
-    private void invalidChoice() {
-        System.out.println("\nInvalid Choice!");
-        System.out.print("Press enter key to continue...");
-        input.nextLine();
-    }
 
 
 
