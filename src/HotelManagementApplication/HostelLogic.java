@@ -30,15 +30,13 @@ public class HostelLogic {
         return rooms;
      }
 
-     public ArrayList<Room> getAvailableRooms() {
-        ArrayList availableRooms = new ArrayList<>();
-         for (int i = 0; i < rooms.size(); i++) {
-             if (rooms.get(i).isBookingStatus()){
-                 availableRooms.add(i);
-             }
-         }
-         return availableRooms;
-     }
+    public void printAvailableRooms() {
+        for (int i = 0; i < rooms.size(); i++) {
+            if (rooms.get(i).isBookingStatus()) {
+                System.out.println(rooms.get(i));
+            }
+        }
+    }
 
 
     public Customer getCustomer() {
