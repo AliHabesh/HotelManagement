@@ -30,6 +30,7 @@ public class HostelLogic {
         return rooms;
      }
 
+
      public ArrayList<Room> getAvailableRooms() {
         ArrayList availableRooms = new ArrayList<>();
          for (int i = 0; i < rooms.size(); i++) {
@@ -40,6 +41,15 @@ public class HostelLogic {
 
          return availableRooms;
      }
+
+    public void printAvailableRooms() {
+        for (int i = 0; i < rooms.size(); i++) {
+            if (rooms.get(i).isBookingStatus()) {
+                System.out.println(rooms.get(i));
+            }
+        }
+    }
+
 
 
     public Customer getCustomer() {
@@ -102,6 +112,7 @@ public class HostelLogic {
                 String checkOutDate = input.nextLine();
                 Date UserInputDate3 = new SimpleDateFormat("dd/mm/yyyy").parse(checkOutDate);
                 currentBooking.setCheckOutDate(UserInputDate3);
+
                 break;
             default:
                 System.out.println("Error!");
@@ -323,7 +334,6 @@ public class HostelLogic {
 
         }
     }
-
 
 
 
