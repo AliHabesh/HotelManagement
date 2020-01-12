@@ -90,8 +90,8 @@ public class HotelMenu {
                     break;
                 case 8:
                     System.out.println("Enter the booking id: ");
-                    int bookingID = input.nextInt();
-                    myApp.editBooking(bookingID);
+                    String ssn = input.nextLine();
+                    myApp.editBooking(ssn);
                 case 9:
                     System.out.println(myApp.showBookings());
                     break;

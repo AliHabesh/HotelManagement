@@ -11,25 +11,9 @@ public class Booking {
     private String customerSnn;
     private Customer customer;
 
-    public Booking(int bookingId, Date checkInDate,Date checkOutDate ,Customer customer, Room room) { // continue this once HotelLogic class is done
-        this.bookingId = bookingId;
-        this.room = room;
-        this.customer = customer;
-        this.checkInDate = checkInDate;
-        this.checkOutDate = checkOutDate;
-    }
-
     @Override
     public String toString() {
-        return "Booking{" +
-                "bookingId=" + bookingId +
-                ", checkInDate=" + checkInDate +
-                ", checkOutDate=" + checkOutDate +
-                ", totalPrice=" + totalPrice +
-                ", room=" + room +
-                ", customerSnn='" + customerSnn + '\'' +
-                ", customer=" + customer +
-                '}';
+        return checkInDate+", "+checkOutDate+", "+customerSnn+", "+room.getRoomNumber()+", "+totalPrice;
     }
 
     public Booking(Date checkInDate, Date checkOutDate, Customer customer, Room room) { // Customer Management, create booking.

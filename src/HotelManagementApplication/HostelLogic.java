@@ -201,7 +201,7 @@ public class HostelLogic {
 
                 Room room = findRoom(roomNumber);
                 Customer customer = findCustomer(customerName);
-                if (rooms.contains(room) && customers.contains(customer) && !UserInputDate.before(CurrentDate)) {
+                if (rooms.contains(room) && customers.contains(customer) && !UserInputDate.before(CurrentDate) && !room.isBookingStatus()) {
                     if (room.isBookingStatus() == true) {
                         room.setBookingStatus(false);
                     }
@@ -219,11 +219,11 @@ public class HostelLogic {
     }
 
 
-    public void editBooking(int bookingID) throws ParseException {
+    public void editBooking(String customerSnn) throws ParseException {
 
         Booking currentBooking = new Booking();
         for (Booking booking1 : bookings) {
-            if (booking1.getBookingId() == bookingID) {
+            if (booking1.getCustomerSnn() == customerSnn) {
                 currentBooking = booking1;
             } else {
                 System.out.println("No booking found with this booking id!");
@@ -367,6 +367,20 @@ public class HostelLogic {
         } catch (Exception e) {
             System.out.println("Error, record not saved!" + e.getMessage());
         }
+    }
+
+        public void saveRecordsBooking(Booking booking, String filepath) {
+            try {
+                FileWriter fw = new FileWriter(filepath, true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter pw = new PrintWriter(bw);
+                pw.println(booking);
+                pw.flush();
+                pw.close();
+
+            } catch (Exception e) {
+                System.out.println("Error, record not saved!" + e.getMessage());
+            }
 
     }
 
@@ -402,29 +416,30 @@ public class HostelLogic {
         }
 
     }
-    public static void readRecordsBooking(String searchTerm, String filePath) throws FileNotFoundException {
+    public static void readRecordsBooking(String searchTerm, String filePath) throws FileNotFoundException, ParseException {
         boolean found = false;
-        String ssn = "";
-        String name = "";
-        String address = "";
-        String phoneNumber = "";
+        String customerSsn = "";
+        String checkIN = new SimpleDateFormat("dd/mm/yyyy").format(new Date());
+        String checkOut = new SimpleDateFormat("dd/mm/yyyy").format(new Date());
+        String CustomerName = "";
+        String roomNbr = "";
         try {
-
 
             x = new Scanner(new File(filePath));
             x.useDelimiter("[,\n]");
             while (x.hasNext() && !found) {
-                ssn = x.next();
-                name = x.next();
-                address = x.next();
-                phoneNumber = x.next();
+                customerSsn = x.next();
+                checkIN = x.next();
+                 checkOut= x.next();
+                 CustomerName = x.next();
+                roomNbr = x.next();
             }
-            if (ssn.equals(searchTerm)) {
+            if (customerSsn.equals(searchTerm)) {
                 found = true;
             }
 
             if (found) {
-                System.out.println("Ssn: "+ssn+" name: "+name+" address: "+address+" phonenumber: "+phoneNumber);
+                System.out.println("CustomerSsn"+customerSsn+"Check-in date: "+checkIN+" name: "+CustomerName+" room number: "+roomNbr+" Check out: "+checkOut);
             }else{
                 System.out.println("No customer found!");
             }
