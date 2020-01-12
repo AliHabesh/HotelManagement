@@ -8,12 +8,8 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer" +
-                "\nSocial Security Number:" + ssn +
-                "\nName:" + name +
-                "\nAddress:" + address +
-                "\nTelephoneNumber:" + telephoneNumber
-                ;
+        return
+                ssn + "," + name + "," + address + "," + telephoneNumber;
     }
 
     public Customer(String ssn, String name, String address, String telephoneNumber) {

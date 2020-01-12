@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2944d5f-f239-4a0c-99ac-6e44d83e4bd0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/HotelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/HotelMenu.java" afterDir="false" />
-=======
->>>>>>> c3c0c5ab8d4f8050d9bad4dc13dbbfac3d6f1017
+      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Customers1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Customers1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Project_Course_2019_Group-12-" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,8 +25,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UGDfxE2KA84l7QTivoWRLk1V0I" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documents/GitCode/Project_Course_2019_Group-12-" />
   </component>
@@ -98,5 +101,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

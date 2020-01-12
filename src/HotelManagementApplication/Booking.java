@@ -1,6 +1,5 @@
     package HotelManagementApplication;
 
-import java.util.ArrayList;
 import java.util.Date;
 public class Booking {
 
@@ -8,18 +7,29 @@ public class Booking {
     private Date checkInDate;
     private Date checkOutDate;
     private double totalPrice;
+    Room room;
     private String customerSnn;
     private Customer customer;
-    Room room;
 
-
-
-    public Booking(int bookingId, Date checkInDate, Customer customer, Room room) { // continue this once HotelLogic class is done
+    public Booking(int bookingId, Date checkInDate,Date checkOutDate ,Customer customer, Room room) { // continue this once HotelLogic class is done
         this.bookingId = bookingId;
-        this.checkOutDate = checkInDate;
-        this.totalPrice = totalPrice;
         this.room = room;
         this.customer = customer;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "bookingId=" + bookingId +
+                ", checkInDate=" + checkInDate +
+                ", checkOutDate=" + checkOutDate +
+                ", totalPrice=" + totalPrice +
+                ", room=" + room +
+                ", customerSnn='" + customerSnn + '\'' +
+                ", customer=" + customer +
+                '}';
     }
 
     public Booking(Date checkInDate, Date checkOutDate, Customer customer, Room room) { // Customer Management, create booking.
@@ -36,6 +46,7 @@ public class Booking {
     public int getBookingId() {
         return bookingId;
     }
+
 
     public void setBookingId(int bookingId) {
         this.bookingId = bookingId;
@@ -66,6 +77,7 @@ public class Booking {
     }
 
 
+
     public String getCustomerSnn() {
         return customerSnn;
     }
@@ -74,6 +86,7 @@ public class Booking {
         this.customerSnn = customerSnn;
     }
 }
+
 
 
 
