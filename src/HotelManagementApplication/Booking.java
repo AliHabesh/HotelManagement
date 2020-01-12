@@ -1,4 +1,4 @@
-    package HotelManagementApplication;
+package HotelManagementApplication;
 
 import java.util.Date;
 public class Booking {
