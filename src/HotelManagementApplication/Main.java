@@ -24,7 +24,7 @@ public class Main {
                 myApp.customerMenu();
                 x = false;
             }else if(mail.equals("clara@email.com") && password.equals("12345")){
-                HostelLogic.sssn = "19950507";
+                HostelLogic.sssn = "19950101";
                 myApp.customerMenu();
             }else{
                 System.out.println("Wrong email or password");
