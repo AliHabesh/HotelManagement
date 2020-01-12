@@ -112,7 +112,7 @@ public class HostelLogic {
                 return customer;
             }
         }
-        readRecords(ssn, "C:\\Users\\Ali\\IdeaProjects\\untitled42\\Customers.file");
+        readRecords(HostelLogic.sssn, "C:\\Users\\Ali\\IdeaProjects\\untitled42\\Customers.file");
 
         return null;
     }
