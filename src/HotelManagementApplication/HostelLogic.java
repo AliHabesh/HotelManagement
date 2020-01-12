@@ -71,7 +71,7 @@ public class HostelLogic {
     }
 
     public void addCustomer() {
-        String filepath = "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Customers1.txt";
+        String filepath = "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Custom.txt";
         int x = 1;
         do {
             try {
@@ -112,7 +112,7 @@ public class HostelLogic {
                 return customer;
             }
         }
-        readRecords(HostelLogic.sssn, "C:\\Users\\Ali\\IdeaProjects\\untitled42\\Customers.file");
+        readRecords(HostelLogic.sssn, "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Custom.txt");
 
         return null;
     }
@@ -305,8 +305,7 @@ public class HostelLogic {
             }
         }
 
-        readRecords(HostelLogic.sssn, "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Customers1.txt");
-
+        readRecords(HostelLogic.sssn, "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Custom.txt");
         return null;
     }
 
