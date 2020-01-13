@@ -11,11 +11,11 @@ public class Room {
     @Override
     public String toString() {
         return ( "Room "+
-                "\nroomNumber=" + roomNumber +
-                "\n numberOfBeds=" + numberOfBeds +
-                "\n balcony=" + balcony +
-                "\n pricePerNight=" + pricePerNight +
-                "\n bookingStatus=" + bookingStatus
+                "roomNumber=" + roomNumber +
+                "numberOfBeds=" + numberOfBeds +
+                "balcony=" + balcony +
+                "pricePerNight=" + pricePerNight +
+                "bookingStatus=" + bookingStatus
                 );
     }
 

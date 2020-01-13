@@ -13,11 +13,12 @@ public class Booking {
 
     @Override
     public String toString() {
-        return checkInDate+", "+checkOutDate+", "+customerSnn+", "+room.getRoomNumber()+", "+totalPrice;
+        return customerSnn+","+checkInDate+","+checkOutDate+","+room.getRoomNumber()+", "+room.getPricePerNight();
     }
 
-    public Booking(Date checkInDate, Date checkOutDate, Customer customer, Room room) { // Customer Management, create booking.
+    public Booking(Date checkInDate, Date checkOutDate, String customerSnn, Customer customer, Room room) { // Customer Management, create booking.
         this.customer = customer;
+        this.customerSnn = customerSnn;
         this.checkInDate = checkInDate;
         this.room = room;
         this.checkOutDate = checkOutDate;

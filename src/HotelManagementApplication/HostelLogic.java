@@ -1,6 +1,7 @@
 package HotelManagementApplication;
 
 import java.io.*;
+import java.lang.invoke.StringConcatFactory;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.Scanner;
 
 public class HostelLogic {
     public static String sssn;
+
 
     public void setSsn(String ssn) {
         this.sssn = sssn;
@@ -66,6 +68,15 @@ public class HostelLogic {
             System.out.println(rooms.get(i));
         }
         if (rooms.isEmpty()) {
+            System.out.println("No rooms exist!");
+        }
+    }
+
+    public void getBookings() {
+        for (int i = 0; i < bookings.size(); i++) {
+            System.out.println(bookings.get(i));
+        }
+        if (bookings.isEmpty()) {
             System.out.println("No rooms exist!");
         }
     }
@@ -181,18 +192,21 @@ public class HostelLogic {
 
 
     public void createBooking() throws ParseException {
+        String filePath = "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Booking.txt";
         int x = 1;
         while (x == 1) {
             try {
-                System.out.println("Enter the customers name");
+                Date CurrentDate = new Date();
+                System.out.println("Enter the customer ssn: ");
+                String ssn = input.nextLine();
+                System.out.println("Enter the customers name: ");
                 String customerName = input.nextLine();
-                input.nextInt();
                 System.out.println("Enter room number: ");
                 int roomNumber = input.nextInt();
                 input.nextLine();
-                Date CurrentDate = new Date();
 
-                System.out.println("Enter the check in date in MM/DD/YYYY format");
+
+                System.out.println("Enter the check in date in MM/dd/yyyy format");
                 String CheckInDate = input.nextLine();
                 Date UserInputDate = new SimpleDateFormat("MM/dd/yyyy").parse(CheckInDate);
                 System.out.println("Enter the Date in MM/DD/YYYY format");
@@ -200,12 +214,13 @@ public class HostelLogic {
                 Date UserInputDate2 = new SimpleDateFormat("MM/dd/yyyy").parse(checkOutDate);
 
                 Room room = findRoom(roomNumber);
-                Customer customer = findCustomer(customerName);
-                if (rooms.contains(room) && customers.contains(customer) && !UserInputDate.before(CurrentDate) && !room.isBookingStatus()) {
+                Customer customer = findCustomer(ssn);
+                if (rooms.contains(room) && customers.contains(customer) && !UserInputDate.before(CurrentDate)) {
                     if (room.isBookingStatus() == true) {
                         room.setBookingStatus(false);
                     }
-                    bookings.add(new Booking(UserInputDate, UserInputDate2, customer, room));
+                    bookings.add(new Booking(UserInputDate, UserInputDate2, ssn, customer, room));
+                    saveRecordsBooking(new Booking(UserInputDate, UserInputDate2, ssn, customer, room), filePath);
 
                     x = 2;
                 } else {
@@ -270,15 +285,15 @@ public class HostelLogic {
     }
 
 
-
     public void createBooking2() throws ParseException { // New, update this to the class
+        String filePath = "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Booking.txt";
         try {
-            System.out.println("Enter your name");
-            String customerName = input.nextLine();
+            Date CurrentDate = new Date();
+            System.out.println("Enter your ssn: ");
+            String customersnn = input.nextLine();
             input.nextLine();
             System.out.println("Enter the desired room number: ");
             int roomNumber = input.nextInt();
-            input.nextLine();
             System.out.println("Enter the check in Date in dd/mm/yyyy format");
             String CheckInDate = input.nextLine();
             Date UserInputDate = new SimpleDateFormat("dd/mm/yyyy").parse(CheckInDate);
@@ -286,11 +301,13 @@ public class HostelLogic {
             String checkOutDate = input.nextLine();
             Date UserInputDate2 = new SimpleDateFormat("dd/mm/yyyy").parse(CheckInDate);
             Room room = findRoom(roomNumber);
-            Customer customer = findCustomer(customerName);
-            if (rooms.contains(room) && customers.contains(customer)) {
-
-                bookings.add(new Booking(UserInputDate, UserInputDate2, customer, room));
-
+            Customer customer = findCustomer(customersnn);
+            if (rooms.contains(room) && customers.contains(customer) && !UserInputDate.before(CurrentDate)) {
+                if (room.isBookingStatus() == true) {
+                    room.setBookingStatus(false);
+                }
+                bookings.add(new Booking(UserInputDate, UserInputDate2, customersnn, customer, room));
+                saveRecordsBooking(new Booking(UserInputDate, UserInputDate2, customersnn, customer, room), filePath);
             }
         } catch (Exception e) {
             System.out.println("There was an error, please remember to input in the right format , Error was : " + e.getMessage());
@@ -306,6 +323,18 @@ public class HostelLogic {
         }
 
         readRecords(HostelLogic.sssn, "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Custom.txt");
+        return null;
+    }
+
+    public Booking getBooking() throws FileNotFoundException, ParseException {
+        for (Booking booking : bookings) {
+            if (booking.getCustomerSnn().equals(HostelLogic.sssn)) {
+                return booking;
+            }
+
+        }
+
+        readRecordsBooking(HostelLogic.sssn, "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Booking.txt");
         return null;
     }
 
@@ -369,18 +398,18 @@ public class HostelLogic {
         }
     }
 
-        public void saveRecordsBooking(Booking booking, String filepath) {
-            try {
-                FileWriter fw = new FileWriter(filepath, true);
-                BufferedWriter bw = new BufferedWriter(fw);
-                PrintWriter pw = new PrintWriter(bw);
-                pw.println(booking);
-                pw.flush();
-                pw.close();
+    public void saveRecordsBooking(Booking booking, String filepath) {
+        try {
+            FileWriter fw = new FileWriter(filepath, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            pw.println(booking);
+            pw.flush();
+            pw.close();
 
-            } catch (Exception e) {
-                System.out.println("Error, record not saved!" + e.getMessage());
-            }
+        } catch (Exception e) {
+            System.out.println("Error, record not saved!" + e.getMessage());
+        }
 
     }
 
@@ -400,22 +429,26 @@ public class HostelLogic {
                 name = x.next();
                 address = x.next();
                 phoneNumber = x.next();
-            }
-            if (ssn.equals(searchTerm)) {
-                found = true;
+
+                if (ssn.equals(searchTerm)) {
+                    found = true;
+                }
+
+                if (found) {
+                    System.out.println("Ssn: " + ssn + " name: " + name + " address: " + address + " phonenumber: " + phoneNumber);
+                } else {
+                    System.out.println("No customer found!");
+                }
             }
 
-            if (found) {
-                System.out.println("Ssn: "+ssn+" name: "+name+" address: "+address+" phonenumber: "+phoneNumber);
-            }else{
-                System.out.println("No customer found!");
-            }
         } catch (Exception e) {
-            System.out.println("error!"+e.getMessage());
+            System.out.println("error!" + e.getMessage());
 
         }
 
     }
+
+
     public static void readRecordsBooking(String searchTerm, String filePath) throws FileNotFoundException, ParseException {
         boolean found = false;
         String customerSsn = "";
@@ -430,30 +463,31 @@ public class HostelLogic {
             while (x.hasNext() && !found) {
                 customerSsn = x.next();
                 checkIN = x.next();
-                 checkOut= x.next();
-                 CustomerName = x.next();
+                checkOut = x.next();
                 roomNbr = x.next();
-            }
-            if (customerSsn.equals(searchTerm)) {
-                found = true;
+
+                if (customerSsn.equals(searchTerm)) {
+                    found = true;
+                }
+                if (found) {
+                    System.out.println("CustomerSsn:  " + customerSsn + "|| Check-in date: " + checkIN + "|| room number: " + roomNbr + "|| Check out: " + checkOut);
+                } else {
+                    System.out.println("No booking found!");
+                }
             }
 
-            if (found) {
-                System.out.println("CustomerSsn"+customerSsn+"Check-in date: "+checkIN+" name: "+CustomerName+" room number: "+roomNbr+" Check out: "+checkOut);
-            }else{
-                System.out.println("No customer found!");
-            }
-        } catch (Exception e) {
-            System.out.println("error!"+e.getMessage());
+            }catch(Exception e){
+            System.out.println("error!" + e.getMessage());
+
 
         }
 
     }
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+

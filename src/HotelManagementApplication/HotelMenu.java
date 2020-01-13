@@ -18,11 +18,12 @@ public class HotelMenu {
             System.out.println("2. Check available rooms");
             System.out.println("3. Add a booking");
             System.out.println("4. Get your customer information");
-            System.out.println("5. Exit/Log out");
+            System.out.println("5. Get all your bookings");
+            System.out.println("6. Exit/Log out");
             choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println("Enter booking ID");
+                    System.out.println("Enter booking ssn: ");
                     String ssn = input.nextLine();
                     myApp.editBookingCustomer(ssn);
                     break;
@@ -36,6 +37,9 @@ public class HotelMenu {
                     myApp.getCustomer2(HostelLogic.sssn);
                     break;
                 case 5:
+                    myApp.getBooking();
+                    break;
+                case 6:
                     x = false;
                     break;
                 default:
@@ -57,7 +61,7 @@ public class HotelMenu {
             System.out.println("3. Show specific customer");
             System.out.println("4. get all available rooms ");
             System.out.println("5. Add rooms");
-            System.out.println("6. Add a room");
+            System.out.println("6. show all rooms");
             System.out.println("7. Add a booking");
             System.out.println("8. Edit booking");
             System.out.println("9. Show all bookings");
@@ -102,7 +106,7 @@ public class HotelMenu {
                     myApp.removeCustomer();
                     break;
                 case 12:
-                    y = false;
+                   y = false;
                     break;
 
 

@@ -9,7 +9,7 @@ public class Customer {
     @Override
     public String toString() {
         return
-                ssn + ", " + name + ", " + address + ", " + telephoneNumber;
+                ssn + "," + name + "," + address + "," + telephoneNumber;
     }
 
     public Customer(String ssn, String name, String address, String telephoneNumber) {
