@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2944d5f-f239-4a0c-99ac-6e44d83e4bd0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Booking.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Booking.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Booking.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Custom.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Custom.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/HostelLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/HostelLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/HotelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/HotelMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HotelManagementApplication/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelManagementApplication/Room.java" afterDir="false" />
@@ -110,16 +108,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HotelManagementApplication/Booking.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

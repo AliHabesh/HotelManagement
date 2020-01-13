@@ -234,14 +234,15 @@ public class HostelLogic {
     }
 
 
-    public void editBooking(String customerSnn) throws ParseException {
-
+    public void editBooking() throws ParseException {
+        System.out.println("enter customer ssn: ");
+        String customerssn = input.nextLine();
         Booking currentBooking = new Booking();
         for (Booking booking1 : bookings) {
-            if (booking1.getCustomerSnn() == customerSnn) {
+            if (booking1.getCustomerSnn().equals(customerssn)) {
                 currentBooking = booking1;
             } else {
-                System.out.println("No booking found with this booking id!");
+                System.out.println("No booking found with this ssn!");
             }
         }
         Scanner input = new Scanner(System.in);
@@ -257,6 +258,7 @@ public class HostelLogic {
             case 1:
                 System.out.println("Enter the new ssn: ");
                 String newssn = input.nextLine();
+                input.next();
                 currentBooking.setCustomerSnn(newssn);
                 break;
             case 2:

@@ -93,9 +93,8 @@ public class HotelMenu {
                     myApp.createBooking();
                     break;
                 case 8:
-                    System.out.println("Enter the booking id: ");
-                    String ssn = input.nextLine();
-                    myApp.editBooking(ssn);
+                    myApp.editBooking();
+                    break;
                 case 9:
                     System.out.println(myApp.showBookings());
                     break;
