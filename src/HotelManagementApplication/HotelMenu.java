@@ -14,32 +14,35 @@ public class HotelMenu {
         boolean x = true;
         while (x) {
             System.out.println("--------------");
-            System.out.println("1. Edit your profile");
-            System.out.println("2. Check available rooms");
-            System.out.println("3. Add a booking");
-            System.out.println("4. Get your customer information");
-            System.out.println("5. Get all your bookings");
-            System.out.println("6. Exit/Log out");
+            System.out.println("1. Create your profile ");
+            System.out.println("2. Edit your profile ");
+            System.out.println("3. Check available rooms ");
+            System.out.println("4. Add a booking ");
+            System.out.println("5. Get your customer information ");
+            System.out.println("6. Get all your booking s");
+            System.out.println("7. Exit/Log out");
             choice = input.nextInt();
             switch (choice) {
                 case 1:
+                    myApp.addCustomer();
+                case 2:
                     System.out.println("Enter booking ssn: ");
                     String ssn = input.nextLine();
                     myApp.editBookingCustomer(ssn);
                     break;
-                case 2:
+                case 3:
                     myApp.printAvailableRooms();
                     break;
-                case 3:
+                case 4:
                     myApp.createBooking2();
                     break;
-                case 4:
+                case 5:
                     myApp.getCustomer2(HostelLogic.sssn);
                     break;
-                case 5:
+                case 6:
                     myApp.getBooking();
                     break;
-                case 6:
+                case 7:
                     x = false;
                     break;
                 default:
