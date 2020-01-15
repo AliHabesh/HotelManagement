@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class HostelLogic {
     public static String sssn;
-    int anInt;
+   
 
 
     public void setSsn(String ssn) {
