@@ -1,4 +1,4 @@
-package HotelManagementApplication;
+package hotelmanagementapp;
 
 public class Customer {
     private String ssn;

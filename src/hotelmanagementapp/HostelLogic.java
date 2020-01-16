@@ -1,7 +1,6 @@
-package HotelManagementApplication;
+package hotelmanagementapp;
 
 import java.io.*;
-import java.lang.invoke.StringConcatFactory;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

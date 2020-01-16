@@ -1,4 +1,4 @@
-package HotelManagementApplication;
+package hotelmanagementapp;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,7 +19,7 @@ public class HotelMenu {
             System.out.println("3. Check available rooms ");
             System.out.println("4. Add a booking ");
             System.out.println("5. Get your customer information ");
-            System.out.println("6. Get all your booking s");
+            System.out.println("6. Get all your bookings ");
             System.out.println("7. Exit/Log out");
             choice = input.nextInt();
             switch (choice) {

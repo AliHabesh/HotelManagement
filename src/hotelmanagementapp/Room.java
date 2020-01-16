@@ -1,4 +1,4 @@
-package HotelManagementApplication;
+package hotelmanagementapp;
 
 public class Room {
     private int roomNumber;
