@@ -19,14 +19,27 @@ public class Main {
             if (mail.toLowerCase().endsWith("ali@employee.com") && password.equals("12345")) {
                 myApp.empMenu();
                 x = false;
-            } else if (mail.equals("ali@stud.hkr.se") && password.equals("12345")) {
+            }else if (mail.toLowerCase().endsWith("bright@employee.com") && password.equals("12345")){
+                myApp.empMenu();
+                x = false;
+            }else if (mail.equals("ali@stud.hkr.se") && password.equals("12345")) {
                 HostelLogic.sssn = "19971029";
                 myApp.customerMenu();
                 x = false;
-            }else if(mail.equals("clara@email.com") && password.equals("12345")){
+            }else if (mail.equals("makel@stud.hkr.se") && password.equals("12345")){
+                HostelLogic.sssn = "19940701";
+                myApp.customerMenu();
+                x=false;
+            }
+            else if(mail.equals("clara@email.com") && password.equals("12345")){
                 HostelLogic.sssn = "19950101";
                 myApp.customerMenu();
-            }else{
+            }else if (mail.equals("Admin")&& password.equals("12345")){
+
+                myApp.adminMenu();
+
+            }
+            else{
                 System.out.println("Wrong email or password");
             }
         }

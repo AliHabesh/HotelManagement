@@ -10,7 +10,15 @@ import java.util.Scanner;
 public class HostelLogic {
     public static String sssn;
 
-
+    static ArrayList<Employee> employees = new ArrayList<>(){
+        {
+            add(new Employee("g11","Makel Topaz","Sperlingatan 18 Malmö"));
+            add(new Employee("g12","Bright Shenaski","Kvarby 11 Lund"));
+            add(new Employee("g13","John Cena","Jagersro Kaskrona"));
+            add(new Employee("g14","The Rock","perstörp 11 Helsinborg"));
+            add(new Employee("g15","Kobe Bryant","Kvarby 11 Stockhom"));
+        }
+    };
 
     public void setSsn(String ssn) {
         this.sssn = sssn;
@@ -38,6 +46,14 @@ public class HostelLogic {
         findCustomer(ssn);
         Customer customer1 = findCustomer(ssn);
         customers.remove(customer1);
+    }
+
+    public void removeEmployee(){
+        System.out.println("Enter Employee ID");
+        String empId = input.nextLine();
+        findEmployee(empId);
+        Employee emp = findEmployee(empId);
+        employees.remove(emp);
     }
 
     public void removeRoom() {
@@ -79,6 +95,27 @@ public class HostelLogic {
         if (bookings.isEmpty()) {
             System.out.println("No rooms exist!");
         }
+    }
+
+    public void addEmployee(){
+        int x = 1;
+        do {
+            try {
+                System.out.println("Enter the employee id: ");
+                String id = input.nextLine();
+                System.out.println("Enter employee name: ");
+                String name = input.nextLine();
+                System.out.println("Enter employee address: ");
+                String address = input.nextLine();
+
+                employees.add(new Employee(id, name, address));
+
+                x = 2;
+            } catch (Exception e) {
+                System.out.println("There was an error, please keep in mind that you have to input with the correct format!" + e.getMessage());
+            }
+        } while (x == 1);
+
     }
 
     public void addCustomer() {
@@ -126,6 +163,12 @@ public class HostelLogic {
         readRecords(HostelLogic.sssn, "C:\\Users\\Ali\\IdeaProjects\\Project_Course_2019_Group-12-\\src\\HotelManagementApplication\\Custom.txt");
 
         return null;
+    }
+    public void printEmployees(){
+        for (Employee e: employees
+             ) {
+            System.out.println(e);
+        }
     }
 
     public void printAvailableRooms() {
@@ -187,6 +230,15 @@ public class HostelLogic {
             }
         }
 
+        return null;
+    }
+
+    public Employee findEmployee(String id) {
+        for (Employee employee : employees) {
+            if ((employee.getId().equals(id))) {
+                return employee;
+            }
+        }
         return null;
     }
 
